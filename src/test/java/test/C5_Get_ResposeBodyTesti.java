@@ -5,6 +5,7 @@ import org.hamcrest.Matchers;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
 
 public class C5_Get_ResposeBodyTesti {
 
@@ -30,7 +31,7 @@ public class C5_Get_ResposeBodyTesti {
         // 4- Assertion islemi
         response.then()
                 .assertThat().statusCode(200).contentType("application/json; charset=utf-8")
-                .body("userId", Matchers.equalTo(5))
-                .body("title",Matchers.equalTo("optio dolor molestias sit"));
+                .body("userId",equalTo(5),
+                        "title", equalTo("optio dolor molestias sit"));
     }
 }
