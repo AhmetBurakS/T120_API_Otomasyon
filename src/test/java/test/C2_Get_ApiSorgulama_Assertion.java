@@ -15,16 +15,16 @@ ve status Line'in HTTP/1.1 200 OK
  */
 
     @Test
-    public void getAssert(){
+    public void getAssert01(){
+
         String url = "https://restful-booker.herokuapp.com/booking/83";
-        Response responce = given().when().get(url);
 
-        responce.then()
-                .assertThat()
+        Response response = given().when().get(url);
+
+        response.then().assertThat()
                 .statusCode(200)
+                .contentType("application/json")
                 .header("Server","Cowboy")
-                .contentType("application/json; charset=utf-8")
                 .statusLine("HTTP/1.1 200 OK");
-
     }
 }

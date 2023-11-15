@@ -61,12 +61,9 @@ gonderdigimizde
         response.then().assertThat()
                         .statusCode(201)
                         .contentType("application/json")
-                        .body("title",equalTo("API"))
-                        .body("userId",lessThan(100))
-                        .body("body",containsString("API"));
-
-
-
+                        .body("title",equalTo("API"),
+                                "userId",lessThan(100),
+                                "body",containsString("API"));
 
     }
 
