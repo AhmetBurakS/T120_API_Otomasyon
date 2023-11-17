@@ -1,6 +1,6 @@
 package test;
 
-public class C26 {
+public class C26_TrelloPOJO {
 
              /*
                 C28_Post_Serialization https://api.trello.com/1/boards/?key={{Trello api key}} & token={{Trello Token}}&name=API2
